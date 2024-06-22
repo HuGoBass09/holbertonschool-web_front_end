@@ -3,7 +3,7 @@
 @import '11-photos.scss';
 
 @each $name in $list-names {
-    .photo-#{name} {
-        background: url(photos/$name.jpg), no-repeat;
+    .photo-#{$name} {
+        background: url("photos/#{$name}.jpg"), no-repeat;
     }
 }
