@@ -1,15 +1,15 @@
 // using @extend
 
-%info {
+.info {
     font-size: 12px;
 }
 
 .success {
     color: #00FF00;
-    @extend %info;
+    @extend .info;
 }
 
 .warning {
     color: #FF0000;
-    @extend %info;
+    @extend .info;
 }
