@@ -1,0 +1,16 @@
+// declaring 2 color variables
+$my_color1: #3D3D3D;
+$my_color2: #6D6D6D;
+
+body {
+    color: $my_color1;
+    background-color: $my_color2;
+}
+
+p {
+    color: $my_color1;
+}
+
+h2 {
+    background-color: $my_color2;
+}
