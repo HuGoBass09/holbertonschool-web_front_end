@@ -1,0 +1,10 @@
+// assigning a variable
+$my_color: #3D3D3D;
+
+body {
+    color: $my_color
+}
+
+p {
+    color: $my_color;
+}
