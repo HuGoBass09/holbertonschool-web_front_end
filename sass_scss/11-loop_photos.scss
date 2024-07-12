@@ -4,6 +4,7 @@
 
 @each $name in $list-names {
     .photo-#{$name} {
-        background: url("photos/#{$name}.jpg"), no-repeat;
+        background: url("photos/#{$name}.jpg"),
+        no-repeat;
     }
 }
