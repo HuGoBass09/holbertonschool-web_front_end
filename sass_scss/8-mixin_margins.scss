@@ -1,14 +1,14 @@
 // using a mixin
 
 @mixin my_margin($my_margin: 10px) {
-    margin-left: $my_margin;
-    margin-right: $my_margin;
+  margin-left: $my_margin;
+  margin-right: $my_margin;
 }
 
 body {
-    @include my_margin;
+  @include my_margin;
 }
 
 div {
-    @include my_margin($my_margin: 15px);
+  @include my_margin($my_margin: 15px);
 }

@@ -1,23 +1,23 @@
 function countPrimeNumbers() {
-    function isPrime(number) {
-        for (let i = 2; i < number; ++i) {
-            if (number % i === 0) {
-                return false;
-            }
-        }
-
-        return number > 1;
+  function isPrime(number) {
+    for (let i = 2; i < number; ++i) {
+      if (number % i === 0) {
+        return false;
+      }
     }
 
-    let count = 0;
+    return number > 1;
+  }
 
-    for (let i = 2; i <= 100; ++i) {
-        if (isPrime(i)) {
-            ++count;
-        }
+  let count = 0;
+
+  for (let i = 2; i <= 100; ++i) {
+    if (isPrime(i)) {
+      ++count;
     }
+  }
 
-    return count;
+  return count;
 }
 
 const startTime = performance.now();
@@ -26,4 +26,8 @@ countPrimeNumbers();
 
 const endTime = performance.now();
 
-console.log(`Execution time of printing countPrimeNumbers was ${endTime - startTime} milliseconds.`);
+console.log(
+  `Execution time of printing countPrimeNumbers was ${
+    endTime - startTime
+  } milliseconds.`
+);

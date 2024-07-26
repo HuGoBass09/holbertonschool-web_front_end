@@ -1,29 +1,37 @@
 function countPrimeNumbers() {
-    function isPrime(number) {
-        for (let i = 2; i < number; ++i) {
-            if (number % i === 0) {
-                return false;
-            }
-        }
-
-        return number > 1;
+  function isPrime(number) {
+    for (let i = 2; i < number; ++i) {
+      if (number % i === 0) {
+        return false;
+      }
     }
 
-    let count = 0;
+    return number > 1;
+  }
 
-    for (let i = 2; i <= 100; ++i) {
-        if (isPrime(i)) {
-            ++count;
-        }
+  let count = 0;
+
+  for (let i = 2; i <= 100; ++i) {
+    if (isPrime(i)) {
+      ++count;
     }
+  }
 
-    return count;
+  return count;
 }
 
 const startTime = performance.now();
 
-setTimeout(function () { for (let i = 0; i < 100; ++i) { countPrimeNumbers() } }, 0);
+setTimeout(function () {
+  for (let i = 0; i < 100; ++i) {
+    countPrimeNumbers();
+  }
+}, 0);
 
 const endTime = performance.now();
 
-console.log(`Execution time of calculating prime numbers 100 times was ${endTime - startTime} milliseconds.`);
+console.log(
+  `Execution time of calculating prime numbers 100 times was ${
+    endTime - startTime
+  } milliseconds.`
+);
