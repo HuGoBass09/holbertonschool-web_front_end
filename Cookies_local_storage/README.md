@@ -1,0 +1,1 @@
+Learning cookies and local storage concepts in javascript

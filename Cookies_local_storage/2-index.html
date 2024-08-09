@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+  </head>
+  <body>
+    <h1>Login to the website</h1>
+    <input type="text" id="firstname" />
+    <input type="text" id="email" />
+    <button onclick="setCookies()">Log me in</button>
+    <h1>Cookies</h1>
+    <button onclick="showCookies()">Show the cookies</button>
+
+    <script>
+      function setCookies() {
+        const firstname = document.getElementById("firstname").value;
+        const email = document.getElementById("email").value;
+
+        const d = new Date();
+        d.setTime(d.getTime() + 10 * 24 * 60 * 60 * 1000);
+        const expires = "expires=" + d.toUTCString();
+
+        document.cookie = `firstname=${firstname}; ${expires}`;
+        document.cookie = `email=${email}; ${expires}`;
+      }
+
+      function showCookies() {
+        const newP = document.createElement("p");
+        newP.innerHTML = `Email: ${getCookie("email")} - Firstname: ${getCookie(
+          "firstname"
+        )}`;
+        document.body.appendChild(newP);
+      }
+
+      function getCookie(name) {
+        const cookies = document.cookie.split(";");
+        for (const cookie of cookies) {
+          if (cookie.split("=")[0].trim() === name) {
+            return cookie.split("=")[1];
+          }
+        }
+        return "";
+      }
+    </script>
+  </body>
+</html>
